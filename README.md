@@ -18,4 +18,4 @@ Camera  | 5MPx, LED Flash
 
 ![Sony Xperia M](http://cdn.ndtv.com/tech/images/gadgets/sony-xperia-m-dual-update-635.jpg "Sony Xperia M in white")
 
-This branch is for building SlimKat (or Android KitKat 4.4 AOSP based roms) ROMS.
+This branch is for building MerkMOD ROM.
