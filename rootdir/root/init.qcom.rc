@@ -52,7 +52,11 @@ on init
     symlink /storage/usbdisk /mnt/usbdisk
 
     symlink /dev/socket /tmp
-
+    
+on fs
+    mount_all fstab.qcom    
+    mount vfat /dev/block/platform/msm_sdcc.1/by-name/sdcard /storage/sdcard0 nosuid nodev barrier=1
+    
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
