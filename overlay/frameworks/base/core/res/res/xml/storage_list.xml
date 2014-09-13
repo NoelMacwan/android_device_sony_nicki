@@ -42,7 +42,7 @@
             android:emulated="true"
             android:removable="false"
             android:mtpReserve="350" 
-            android:externalApps="true"/>
+            android:externalApps="true" />
         <storage android:mountPoint="/storage/sdcard1"
             android:storageDescription="@string/storage_sd_card"
             android:primary="false"
