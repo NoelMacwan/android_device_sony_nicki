@@ -1,4 +1,5 @@
 # Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2015 The SlimRoms Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,10 +14,10 @@
 # limitations under the License.
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/slim/config/nfc_enhanced.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/sony/nicki/nicki.mk)
@@ -26,7 +27,7 @@ TARGET_SCREEN_WIDTH := 480
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := nicki
-PRODUCT_NAME := cm_nicki
+PRODUCT_NAME := slim_nicki
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := nicki
 PRODUCT_MANUFACTURER := Sony
