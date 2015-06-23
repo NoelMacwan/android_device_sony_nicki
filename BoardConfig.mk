@@ -64,9 +64,6 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# Legacy Ril
-BOARD_HAS_RIL_LEGACY_PAP := true
-
 # Fm
 QCOM_FM_ENABLED := true
 AUDIO_FEATURE_ENABLED_FM := true
@@ -93,8 +90,6 @@ TARGET_RECOVERY_FSTAB = device/sony/nicki/rootdir/root/fstab.qcom
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/nicki/custombootimg.mk
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/sony/nicki/recovery/recovery_keys.c
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 
 # TWRP Flags
 DEVICE_RESOLUTION := 480x854
@@ -122,9 +117,7 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_nicki
 TARGET_LIBINIT_DEFINES_FILE := device/sony/nicki/init/init_nicki.c
 
-TARGET_USES_LOGD := false
-
-BOARD_USES_LEGACY_MMAP := true
+BOARD_HARDWARE_CLASS := device/sony/nicki/cmhw/
 
 # Sepolicy
 include device/qcom/sepolicy/sepolicy.mk
@@ -135,19 +128,20 @@ BOARD_SEPOLICY_DIRS += \
 BOARD_SEPOLICY_UNION += \
        device.te \
        file_contexts \
+       file.te \
        property.te \
        property_contexts \
        healthd.te \
        init_shell.te \
-       vold.te \
-       thermal-engine.te \
-       rmt_storage.te \
+       kernel.te \
        mediaserver.te \
        mm-qcamerad.te \
        mpdecision.te \
        location.te \
        sdcardd.te \
        system_app.te \
-       system_server.te
+       system_server.te \
+       thermal-engine.te \
+       vold.te
 
 -include vendor/sony/nicki/BoardConfigVendor.mk
